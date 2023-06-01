@@ -28,3 +28,9 @@ describe("RED-BLUE Button", () => {
     expect(button).toHaveTextContent("Change to Red");
   });
 });
+
+describe("Button Controller Checkbox", () => {
+  it("should be unchecked", () => {});
+
+  it("should disabled the button when clicked", () => {});
+});
