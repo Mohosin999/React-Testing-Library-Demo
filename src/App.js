@@ -18,6 +18,10 @@ function App() {
         {/* {color === "red" ? "Change to Blue" : "Change to Red"} */}
         Change to {buttonText}
       </button>
+      <div>
+        <input type="checkbox" id="checkbox" />
+        <label htmlFor="checkbox">Change the button state</label>
+      </div>
     </div>
   );
 }
