@@ -30,7 +30,13 @@ describe("RED-BLUE Button", () => {
 });
 
 describe("Button Controller Checkbox", () => {
-  it("should be unchecked", () => {});
+  it("should be unchecked initially", () => {
+    render(<App />);
+    const checkbox = screen.getByRole("checkbox", {
+      name: "Change the button state",
+    });
+    expect(checkbox).not.toBeChecked();
+  });
 
   it("should disabled the button when clicked", () => {});
 });
