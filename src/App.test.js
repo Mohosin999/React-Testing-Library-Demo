@@ -44,5 +44,15 @@ describe("Button Controller Checkbox", () => {
     expect(button).toBeEnabled();
   });
 
-  it("should disabled the button when clicked", () => {});
+  it("should disabled the button when clicked", () => {
+    render(<App />);
+    const checkbox = screen.getByRole("checkbox", {
+      name: "Change the button state",
+    });
+    const button = screen.getByRole("button", { name: /blue/i });
+
+    fireEvent.click(checkbox);
+    expect(checkbox).toBeChecked();
+    expect(button).toBeDisabled();
+  });
 });
