@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <button
-        style={{ backgroundColor: color }}
+        style={{ backgroundColor: isDisabled ? "gray" : color }}
         onClick={handleClick}
         disabled={isDisabled}
       >

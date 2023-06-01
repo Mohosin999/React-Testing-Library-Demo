@@ -55,4 +55,16 @@ describe("Button Controller Checkbox", () => {
     expect(checkbox).toBeChecked();
     expect(button).toBeDisabled();
   });
+
+  it("should change the background color of the button to gray", () => {
+    render(<App />);
+    const checkbox = screen.getByRole("checkbox", {
+      name: "Change the button state",
+    });
+    const button = screen.getByRole("button", { name: /blue/i });
+
+    fireEvent.click(checkbox);
+    expect(checkbox).toBeChecked();
+    expect(button).toHaveStyle("background-color: gray");
+  });
 });
