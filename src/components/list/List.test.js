@@ -28,5 +28,11 @@ describe("List Components with Data Props", () => {
 
     const listItems = screen.getAllByTestId("list-item");
     expect(listItems).toHaveLength(data.length);
+
+    listItems.forEach((item, index) => {
+      expect(item.textContent).toBe(data[index]);
+      // aikhane toBeInTheDocument korar dorkar nai,karon amra data get kore niye asci
+      // jodi query kore niye astam tokhnon lagto, get korle data documente always theke
+    });
   });
 });
