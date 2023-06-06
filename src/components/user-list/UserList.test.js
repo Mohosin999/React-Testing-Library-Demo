@@ -41,6 +41,7 @@ describe("User List", () => {
       const errorElement = screen.queryByText(expectedErrorMessage);
 
       expect(errorElement).toBeInTheDocument();
+      expect(errorElement).toHaveTextContent(expectedErrorMessage);
     });
   });
 });

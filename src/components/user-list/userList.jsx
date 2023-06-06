@@ -12,7 +12,7 @@ const UserList = () => {
         setUsers(response.data);
       })
       .catch((error) => {
-        setError(error.message);
+        setError("Network Error");
       });
   }, []);
 
