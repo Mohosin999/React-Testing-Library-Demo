@@ -30,21 +30,8 @@ describe("User List", () => {
     });
   });
 
-  //   it("should display an error message when the request fails", async () => {
-  //     const expectedErrorMessage = "Network Error";
-
-  //     axios.get.mockRejectedValueOnce({ message: expectedErrorMessage });
-
-  //     render(<UserList />);
-
-  //     await waitFor(() => {
-  //       const errorElement = screen.queryByText(expectedErrorMessage);
-
-  //       expect(errorElement).toBeInTheDocument();
-  //     });
-  //   });
   it("should display an error message when the request fails", async () => {
-    const expectedErrorMessage = "Error fetching user data";
+    const expectedErrorMessage = "Network Error";
 
     axios.get.mockRejectedValueOnce({ message: expectedErrorMessage });
 

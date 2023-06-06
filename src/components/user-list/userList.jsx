@@ -12,7 +12,7 @@ const UserList = () => {
         setUsers(response.data);
       })
       .catch((error) => {
-        setError("Error fetching user data");
+        setError(error.message);
       });
   }, []);
 
