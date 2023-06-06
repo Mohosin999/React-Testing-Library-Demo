@@ -19,7 +19,6 @@ const UserList = () => {
   return (
     <div>
       {error && <p>{error}</p>}
-
       <table>
         <thead>
           <tr>
